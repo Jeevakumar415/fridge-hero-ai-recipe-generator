@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fridge Hero 🍳</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="config.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <h1 class="app__title">Fridge Hero 🍳</h1>
+      <p class="app__subtitle">Turn your ingredients into magic</p>
+    </header>
+
+    <section class="ingredient-panel" aria-label="Add your ingredients">
+      <form id="fridge-form" class="ingredient-form" action="#" method="post">
+        <div class="ingredient-form__field">
+          <label class="ingredient-form__label" for="ingredient-1">Ingredient 1</label>
+          <input
+            class="ingredient-form__input"
+            type="text"
+            id="ingredient-1"
+            name="ingredient1"
+            placeholder="e.g. chicken breast"
+            autocomplete="off"
+          />
+        </div>
+        <div class="ingredient-form__field">
+          <label class="ingredient-form__label" for="ingredient-2">Ingredient 2</label>
+          <input
+            class="ingredient-form__input"
+            type="text"
+            id="ingredient-2"
+            name="ingredient2"
+            placeholder="e.g. cherry tomatoes"
+            autocomplete="off"
+          />
+        </div>
+        <div class="ingredient-form__field">
+          <label class="ingredient-form__label" for="ingredient-3">Ingredient 3</label>
+          <input
+            class="ingredient-form__input"
+            type="text"
+            id="ingredient-3"
+            name="ingredient3"
+            placeholder="e.g. feta cheese"
+            autocomplete="off"
+          />
+        </div>
+        <button class="ingredient-form__submit" type="submit">Cook Magic ✨</button>
+      </form>
+    </section>
+
+    <section
+      id="result-card"
+      class="result-card"
+      hidden
+      aria-live="polite"
+      aria-label="Recipe card"
+    >
+      <h2 class="result-card__title">Your recipe</h2>
+      <div id="result-body" class="result-card__body"></div>
+    </section>
+  </main>
+</body>
+</html>
